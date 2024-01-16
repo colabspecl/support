@@ -233,7 +233,7 @@ for host in hosts_in_datacenter:
             add_usb_controller(selected_vm)
         elif args.usb_version == '3.2':
             add_usb_3_2_controller(selected_vm)
-        
+
 
         for device in selected_vm.config.hardware.device:
             if isinstance(device, vim.vm.device.VirtualUSB):
