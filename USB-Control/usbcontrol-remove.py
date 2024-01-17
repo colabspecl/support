@@ -77,8 +77,7 @@ def remove_usb_devices_by_filter(vm, filter_text):
             device_summary = device.deviceInfo.summary.lower()  # Convert to lowercase for case-insensitive comparison
             filter_text = filter_text.lower()  # Convert filter text to lowercase
 
-            print(f"Filter Text: {filter_text}")
-            print(f"Device Description: {device_summary}")
+            print(f"Connected devices: USB device {device.backing.deviceName} {device.deviceInfo.summary}")
 
             if filter_text in device_summary:
                 usb_spec = vim.vm.device.VirtualDeviceSpec()
